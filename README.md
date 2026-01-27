@@ -21,7 +21,7 @@ It answers you on the channels you already use (WhatsApp, Telegram, Slack, Disco
 
 If you want a personal, single-user assistant that feels local, fast, and always-on, this is it.
 
-[Website](https://clawdbot.com) · [Docs](https://docs.clawd.bot) · [Getting Started](https://docs.clawd.bot/start/getting-started) · [Updating](https://docs.clawd.bot/install/updating) · [Showcase](https://docs.clawd.bot/start/showcase) · [FAQ](https://docs.clawd.bot/start/faq) · [Wizard](https://docs.clawd.bot/start/wizard) · [Nix](https://github.com/clawdbot/nix-clawdbot) · [Docker](https://docs.clawd.bot/install/docker) · [Discord](https://discord.gg/clawd)
+[Website](https://clawdbot.com) · [Docs](https://docs.clawd.bot) · [Getting Started](https://docs.clawd.bot/start/getting-started) · [Updating](https://docs.clawd.bot/install/updating) · [Showcase](https://docs.clawd.bot/start/showcase) · [FAQ](https://docs.clawd.bot/start/faq) · [Wizard](https://docs.clawd.bot/start/wizard) · [Nix](https://github.com/clawdbot/nix-clawdbot) · [Docker](https://docs.clawd.bot/install/docker) · [Kubernetes](https://docs.clawd.bot/install/kubernetes) · [Discord](https://discord.gg/clawd)
 
 Preferred setup: run the onboarding wizard (`clawdbot onboard`). It walks through gateway, workspace, channels, and skills. The CLI wizard is the recommended path and works on **macOS, Linux, and Windows (via WSL2; strongly recommended)**.
 Works with npm, pnpm, or bun.
@@ -163,7 +163,7 @@ Run `clawdbot doctor` to surface risky/misconfigured DM policies.
 ### Ops + packaging
 - [Control UI](https://docs.clawd.bot/web) + [WebChat](https://docs.clawd.bot/web/webchat) served directly from the Gateway.
 - [Tailscale Serve/Funnel](https://docs.clawd.bot/gateway/tailscale) or [SSH tunnels](https://docs.clawd.bot/gateway/remote) with token/password auth.
-- [Nix mode](https://docs.clawd.bot/install/nix) for declarative config; [Docker](https://docs.clawd.bot/install/docker)-based installs.
+- [Nix mode](https://docs.clawd.bot/install/nix) for declarative config; [Docker](https://docs.clawd.bot/install/docker) and [Kubernetes (Helm)](https://docs.clawd.bot/install/kubernetes) deployments.
 - [Doctor](https://docs.clawd.bot/gateway/doctor) migrations, [logging](https://docs.clawd.bot/logging).
 
 ## How it works (short)
