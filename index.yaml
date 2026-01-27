@@ -2,6 +2,31 @@ apiVersion: v1
 entries:
   clawdbot:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2026-01-27T04:09:52.311074185Z"
+    description: Personal AI assistant with multi-channel support
+    digest: ff304d31ee971aa1f6beb3805d36791adbddc69f3b9232d090ec352b8cf27ff8
+    home: https://github.com/clawdbot/clawdbot
+    icon: https://github.com/clawdbot/clawdbot/raw/main/README-header.png
+    keywords:
+    - ai
+    - assistant
+    - whatsapp
+    - telegram
+    - discord
+    - claude
+    - chatgpt
+    maintainers:
+    - name: Clawdbot Team
+      url: https://docs.clawd.bot
+    name: clawdbot
+    sources:
+    - https://github.com/clawdbot/clawdbot
+    type: application
+    urls:
+    - https://github.com/sirily11/clawdbot/releases/download/clawdbot-1.0.1/clawdbot-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2026-01-27T03:40:44.407038939Z"
     description: Personal AI assistant with multi-channel support
@@ -26,4 +51,4 @@ entries:
     urls:
     - https://github.com/sirily11/clawdbot/releases/download/clawdbot-1.0.0/clawdbot-1.0.0.tgz
     version: 1.0.0
-generated: "2026-01-27T03:40:44.407049559Z"
+generated: "2026-01-27T04:09:52.311087049Z"
