@@ -2,6 +2,23 @@ Thank you for installing {{ .Chart.Name }}!
 
 Your Clawdbot gateway is starting up. This may take 1-2 minutes.
 
+{{- if .Values.ingress.enabled }}
+{{- $domain := .Values.ingress.domain }}
+{{- $tlsEnabled := .Values.ingress.tls.enabled }}
+{{- if $domain }}
+
+==========================================================
+  Clawdbot is accessible at:
+
+{{- if $tlsEnabled }}
+    https://{{ $domain }}
+{{- else }}
+    http://{{ $domain }}
+{{- end }}
+==========================================================
+{{- end }}
+{{- end }}
+
 1. Check the gateway status:
 
    kubectl get statefulset {{ include "clawdbot.fullname" . }} -n {{ .Release.Namespace }}
@@ -10,8 +27,18 @@ Your Clawdbot gateway is starting up. This may take 1-2 minutes.
 2. Access the Control UI:
 
 {{- if .Values.ingress.enabled }}
+{{- $domain := .Values.ingress.domain }}
+{{- $tlsEnabled := .Values.ingress.tls.enabled }}
+{{- if $domain }}
+{{- if $tlsEnabled }}
+   https://{{ $domain }}
+{{- else }}
+   http://{{ $domain }}
+{{- end }}
+{{- else }}
 {{- range .Values.ingress.hosts }}
    https://{{ .host }}
+{{- end }}
 {{- end }}
 {{- else }}
    # Port-forward to access locally:

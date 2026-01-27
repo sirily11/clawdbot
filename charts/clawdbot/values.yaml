@@ -139,20 +139,33 @@ service:
 ingress:
   enabled: false
   className: nginx
-  annotations:
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
+
+  # Simplified domain configuration (recommended)
+  # Set your domain here - TLS will be auto-configured if tls.enabled is true
+  domain: ""  # e.g., "clawdbot.yourdomain.com"
+
+  # TLS configuration
+  tls:
+    enabled: false
+    # Secret name for TLS certificate (auto-generated name if empty)
+    secretName: ""
+    # Use cert-manager for automatic certificate provisioning
+    certManager:
+      enabled: false
+      issuer: "letsencrypt-prod"
+
+  # Additional annotations
+  annotations: {}
+    # WebSocket support (recommended for real-time features):
     # nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
     # nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
-    # nginx.ingress.kubernetes.io/websocket-services: "{{ include \"clawdbot.fullname\" . }}"
-  hosts:
-    - host: clawdbot.example.com
-      paths:
-        - path: /
-          pathType: Prefix
-  tls: []
-  #  - secretName: clawdbot-tls
-  #    hosts:
-  #      - clawdbot.example.com
+
+  # Advanced: Manual host configuration (overrides domain if set)
+  hosts: []
+  #  - host: clawdbot.example.com
+  #    paths:
+  #      - path: /
+  #        pathType: Prefix
 
 # Resource limits/requests
 resources:
